@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css">
+		#logincard{
+			position: relative;
+			width: 300px;
+			left: 40%;			
+		}
+	</style>
+	<title>Welcome to GreenDM</title>
+</head>
+<body background="{% static 'login/background.jpg' %}>
+	{% load static %}
+	<div class="card" id="logincard">
+	  <h3 class="card-header">Login</h3>
+	  <div class="card-block">
+	    <h4 class="card-title">Enter Login Details</h4>
+	    
+	    <form name="form" action='{% url "login.views.login" %}' method="POST">
+	    {% csrf_token %}
+		    <div class="form-group">
+			  <label for="usr">Name:</label>
+			  <input type="text" class="form-control" id="usr" name="username">
+			</div>
+			<div class="form-group">
+			  <label for="pwd">Password:</label>
+			  <input type="password" class="form-control" id="pwd" name="password">
+			</div>
+
+			<input type="submit" name="Login">
+	    </form>
+	  </div>
+	</div>
+</body>
+</html>
