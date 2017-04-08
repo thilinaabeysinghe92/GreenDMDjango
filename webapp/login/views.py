@@ -6,9 +6,9 @@ def login(request):
 			username = request.POST.get('username', '')
 			password = request.POST.get('password', '')
 
-			
+
 	else:
 		status = "Please try again "
 		return render(request, 'login.html', {'status':status})		
 
-	return render(request, 'login.html', {})		
+	return render(request, 'login.html', {})	
