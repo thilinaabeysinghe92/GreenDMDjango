@@ -21,9 +21,9 @@
 	<div class="card" id="logincard">
 	  <h3 class="card-header">Login</h3>
 	  <div class="card-block">
-	    <h4 class="card-title">Enter Login Details</h4>
+	    <h4 class="card-title">Register in Service</h4>
 	    
-	    <form name="form" action='/register' method="POST">
+	    <form name="form" action="{%  url 'register' %}" method="POST">
 	    {% csrf_token %}
 		    <div class="form-group">
 			  <label for="usr">Name:</label>
@@ -46,7 +46,7 @@
 			  <label><input type="radio" name="possition" value="MarketingPerson">Marketing Person</label>
 			</div>
 
-			<input type="submit" name="Register" class="btn-primary">
+			<input type="submit" name="submit" class="btn-primary">
 	    </form>
 	  </div>
 	</div>
