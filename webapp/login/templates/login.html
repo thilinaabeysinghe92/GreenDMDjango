@@ -6,19 +6,24 @@
 		#logincard{
 			position: relative;
 			width: 300px;
-			left: 40%;			
+			left: 40%;
+			margin-top: 100px;
+			background-color: white;
+			box-shadow: 4px 4px;
+			padding: 10px;
+			border-radius: 5px;			
 		}
 	</style>
 	<title>Welcome to GreenDM</title>
-</head>
-<body background="{% static 'login/background.jpg' %}>
 	{% load static %}
+</head>
+<body background="/static/background.jpg">	
 	<div class="card" id="logincard">
 	  <h3 class="card-header">Login</h3>
 	  <div class="card-block">
 	    <h4 class="card-title">Enter Login Details</h4>
 	    
-	    <form name="form" action='{% url "login.views.login" %}' method="POST">
+	    <form name="form" action='/login' method="POST">
 	    {% csrf_token %}
 		    <div class="form-group">
 			  <label for="usr">Name:</label>
@@ -29,7 +34,7 @@
 			  <input type="password" class="form-control" id="pwd" name="password">
 			</div>
 
-			<input type="submit" name="Login">
+			<input type="submit" name="Login" class="btn-primary">
 	    </form>
 	  </div>
 	</div>

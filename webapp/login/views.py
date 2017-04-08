@@ -1,13 +1,12 @@
 from django.shortcuts import render
-from . import LoginForm
-# Create your views here.
-class login(request):
 
+# Create your views here.
+def login(request):
 	if request.method == "POST":
-		LoginDetails = LoginForm(request.POST)
-		if LoginDetails.is_valid():
-			username = LoginDetails.cleaned_data['username']
-			password = LoginDetails.cleaned_data['password']
-		else:
-			LoginDetails = LoginForm()
+			username = request.POST.get('username', '')
+			password = request.POST.get('password', '')
+	else:
+		status = "Please try again "
+		return render(request, 'login.html', {'status':status})		
+
 	return render(request, 'login.html', {})		
