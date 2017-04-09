@@ -20,6 +20,7 @@ urlpatterns = [
 	url(r'^login/', include('login.urls')),
 	url(r'^register/', include('register.urls')),
     url(r'^csvmodule/', include('csvmodule.urls')),
+    url(r'^dmmodel/', include('dmmodel.urls')),
     url(r'^admin/', admin.site.urls),
 
 ]
