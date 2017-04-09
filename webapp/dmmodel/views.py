@@ -2,4 +2,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def dmmodel(request):	
-	return render(request, 'dmmodel.html', {})	
+	return render(request, 'application.html', {})	

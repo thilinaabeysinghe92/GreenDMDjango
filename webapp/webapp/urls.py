@@ -21,6 +21,7 @@ urlpatterns = [
 	url(r'^register/', include('register.urls')),
     url(r'^csvmodule/', include('csvmodule.urls')),
     url(r'^dmmodel/', include('dmmodel.urls')),
+    url(r'^grapheditor/', include('grapheditor.urls')),
     url(r'^admin/', admin.site.urls),
 
 ]

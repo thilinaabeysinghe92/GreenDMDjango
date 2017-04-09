@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'register',
     'csvmodule',
     'dmmodel',
+    'grapheditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
